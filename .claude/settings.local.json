@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(npx create-expo-app@latest healthfirst --template tabs 2>&1)",
+      "PowerShell(Get-ChildItem -Path \"healthfirst\" -Force | ForEach-Object { Move-Item -Path $_.FullName -Destination \".\" -Force }; Remove-Item \"healthfirst\" -Force -ErrorAction SilentlyContinue; Write-Output \"Done. Contents:\"; Get-ChildItem -Force | Select-Object Name)",
+      "PowerShell(npx expo install expo-notifications expo-secure-store @react-native-async-storage/async-storage 2>&1)",
+      "PowerShell(npm install @supabase/supabase-js nativewind tailwindcss 2>&1)",
+      "PowerShell(npm list nativewind tailwindcss 2>&1)"
+    ]
+  }
+}
